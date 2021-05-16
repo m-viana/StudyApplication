@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">StudyApplication</string>
+
+    <!--Item Grid Collaborator-->
+    <string name="name_collaborator">Tom Holland</string>
+    <string name="office_collaborator">Desenvolvedor Android</string>
 </resources>
