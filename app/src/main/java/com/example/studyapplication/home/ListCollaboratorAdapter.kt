@@ -5,8 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.studyapplication.databinding.ItemGridCollaboratorBinding
-import com.example.studyapplication.home.ListCollaboratorAdapter.*
+import com.example.studyapplication.databinding.ItemListCollaboratorBinding
+import com.example.studyapplication.home.ListCollaboratorAdapter.ListCollaboratorViewHolder
 
 class ListCollaboratorAdapter : ListAdapter<ListCollaborator, ListCollaboratorViewHolder>(DIFF_CALLBACK){
 
@@ -29,20 +29,20 @@ class ListCollaboratorAdapter : ListAdapter<ListCollaborator, ListCollaboratorVi
     }
 
     class ListCollaboratorViewHolder(
-        private val itemBinding: ItemGridCollaboratorBinding
+        private val itemBinding: ItemListCollaboratorBinding
     ) : RecyclerView.ViewHolder(itemBinding.root){
 
         fun bind(listCollaborator: ListCollaborator){
             itemBinding.run {
-                tvNameCollaborator.text = listCollaborator.name
-                tvOfficeCollaborator.text = listCollaborator.office
-                ivCollaborator.setImageResource(listCollaborator.photo)
+                tvNameListCollaborator.text = listCollaborator.name
+                tvOfficeListCollaborator.text = listCollaborator.office
+                ivListCollaborator.setImageResource(listCollaborator.photo)
             }
         }
 
         companion object{
             fun create(parent: ViewGroup): ListCollaboratorViewHolder{
-                val itemBinding = ItemGridCollaboratorBinding
+                val itemBinding = ItemListCollaboratorBinding
                     .inflate(LayoutInflater.from(parent.context), parent, false)
 
                 return ListCollaboratorViewHolder(itemBinding)
@@ -57,5 +57,4 @@ class ListCollaboratorAdapter : ListAdapter<ListCollaborator, ListCollaboratorVi
     override fun onBindViewHolder(holder: ListCollaboratorViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
-
 }
