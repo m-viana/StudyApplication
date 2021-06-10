@@ -7,4 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gray">#6A6A6A</color>
+    <color name="gray_light">#E5E5E5</color>
+    <color name="yellow">#F5A324</color>
+    <color name="brown_dark">#2C1000</color>
+    <color name="error">#C30000</color>
+    <color name="red_dark">#850404</color>
+    <color name="red_accent">#E40C31</color>
+    <color name="blue_facebook">#013B83</color>
+    <color name="blue_accent">#006591</color>
+    <color name="orange">#B5481F</color>
 </resources>

@@ -1,53 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_margin="4dp"
     app:cardCornerRadius="4dp"
-    app:cardElevation="3dp"
-    android:layout_marginHorizontal="8dp"
-    android:layout_marginTop="8dp">
+    app:cardElevation="3dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/iv_collaborator"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_margin="8dp"
-            android:src="@mipmap/ic_launcher"
+        <ImageView
+            android:id="@+id/iv_grid_photo"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="Imagem do usuário"
+            android:maxHeight="140dp"
+            android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:shapeAppearanceOverlay="@style/circleImageView" />
+            app:srcCompat="@drawable/iv_spider_man_x" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_name_collaborator"
+        <TextView
+            android:id="@+id/tv_grid_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            android:fontFamily="@font/open_sans_bold"
-            android:text="@string/name_collaborator"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iv_collaborator"
-            app:layout_constraintTop_toTopOf="@+id/iv_collaborator"
-            app:layout_constraintBottom_toTopOf="@+id/tv_office_collaborator"
-            app:layout_constraintVertical_chainStyle="packed"/>
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_office_collaborator"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            android:fontFamily="@font/open_sans_regular"
-            android:text="@string/office_collaborator"
+            android:layout_margin="8dp"
+            android:text="Tom Holland"
+            android:textAppearance="?attr/textAppearanceHeadline6"
             android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_collaborator"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iv_collaborator"
-            app:layout_constraintTop_toBottomOf="@+id/tv_name_collaborator" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_grid_photo" />
+
+        <TextView
+            android:id="@+id/tv_grid_office"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Engenheiro Android"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_grid_city"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_grid_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_grid_name"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_grid_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Uberlândia/MG"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_grid_office"
+            app:layout_constraintTop_toBottomOf="@+id/tv_grid_office" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

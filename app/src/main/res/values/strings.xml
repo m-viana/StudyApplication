@@ -4,4 +4,15 @@
     <!--Item Grid Collaborator-->
     <string name="name_collaborator">Tom Holland</string>
     <string name="office_collaborator">Desenvolvedor Android</string>
+
+    <!--Login-->
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="titleLogin">Vamos fazer seu login</string>
+    <string name="descriptionLogin">Seja Bem Vindo, sentimos sua falta!</string>
+    <string name="email">Email</string>
+    <string name="password">Senha</string>
+    <string name="forgetPassword">Esqueceu sua senha?</string>
+    <string name="registerLoginScreen">Não tem uma conta? Crie agora!</string>
+    <string name="title_loading_button">Carregando…</string>
+    <string name="title_button">ENTRAR</string>
 </resources>
