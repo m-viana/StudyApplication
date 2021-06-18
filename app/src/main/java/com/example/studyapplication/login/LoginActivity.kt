@@ -1,12 +1,13 @@
 package com.example.studyapplication.login
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.studyapplication.R
 import com.example.studyapplication.databinding.ActivityLoginBinding
-import kotlinx.coroutines.delay
+import com.example.studyapplication.register.RegisterActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -22,6 +23,11 @@ class LoginActivity : AppCompatActivity() {
 
         binding.btnLogin.setOnClickListener {
             binding.btnLogin.setLoading()
+        }
+
+        binding.btnRegister.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
         }
     }
 }

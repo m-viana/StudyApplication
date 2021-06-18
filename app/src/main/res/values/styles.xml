@@ -53,4 +53,8 @@
         <item name="fontFamily">@font/roboto_bold</item>
     </style>
 
+    <style name="CustomToolBar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/yellow</item>
+    </style>
+
 </resources>
